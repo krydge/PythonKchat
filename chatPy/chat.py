@@ -38,7 +38,7 @@ class Message:
 
 
 class Conversation:
-    def __init__(self, members, messages=[]):
+    def __init__(self, members, messages=[], id = ''):
         self.members = members
         self.messages = messages
         self.uniqID = date.isoformat(
@@ -75,7 +75,7 @@ class Conversation:
 
 
 class Member:
-    def __init__(self, username):
+    def __init__(self, username, id = ''):
         self.userName = username
         self.userId = str(username)+date.isoformat(date.today()
                                                    ) + str(randint(100, 999))
